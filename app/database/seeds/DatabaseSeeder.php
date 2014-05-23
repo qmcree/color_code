@@ -13,19 +13,27 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 
+        Category::createMany(array(
+            array('id' => 1, 'name' => 'Red'),
+            array('id' => 2, 'name' => 'Blue'),
+            array('id' => 3, 'name' => 'White'),
+            array('id' => 4, 'name' => 'Yellow'),
+        ));
+
         $questions = self::getQuestions();
         foreach ($questions as $question) {
-            PhoneProvider::create(array(
-                'name' => $provider[0],
-                'sms_email_domain' => $provider[1],
+            Question::create(array(
+                'id' => $question[0],
+                'text' => $question[1],
             ));
         }
 
         $options = self::getOptions();
         foreach ($options as $option) {
-            PhoneProvider::create(array(
-                'name' => $provider[0],
-                'sms_email_domain' => $provider[1],
+            Option::create(array(
+                'question_id' => $option[0],
+                'text' => $option[1],
+                'category_id' => $option[2],
             ));
         }
 	}

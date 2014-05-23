@@ -1,0 +1,181 @@
+question_id,text,category_id
+1,opinionated,1
+2,power-oriented,1
+3,dominant,1
+4,self-serving,1
+5,decisive,1
+6,arrogant,1
+7,assertive,1
+8,bossy,1
+9,action-oriented,1
+10,critical of others,1
+11,determined,1
+12,demanding,1
+13,responsible,1
+14,impatient,1
+15,strong-willed,1
+16,argumentative,1
+17,independent,1
+18,aggressive,1
+19,powerful,1
+20,insensitive,1
+21,logical,1
+22,always right,1
+23,pragmatic,1
+24,merciless,1
+25,task-oriented,1
+26,tactless,1
+27,direct,1
+28,calculating,1
+29,confident,1
+30,intimidating,1
+31,"Driven, direct, and delegating.",1
+32,Fight back with facts and anger.,1
+33,Is task-oriented and productive.,1
+34,"Stubborn, bright, and/or aggressive.",1
+35,"Opinionated, determined, and/or bossy.",1
+36,"Demanding, quick-tempered, and/or uncompromising.",1
+37,Verbally stubborn about facts.,1
+38,"Protective, resourceful, and recommend solutions.",1
+39,"Assertive, articulate, and logical.",1
+40,"Silently self-critical, yet verbally stubborn and defensive.",1
+41,"I am angered, and cunningly plan ways to get even quickly.",1
+42,A most productive way to spend one's time.,1
+43,Feared by others.,1
+44,Approved of and right.,1
+45,"Adventure, leadership, and lots of action.",1
+1,nurturing,2
+2,perfectionist,2
+3,sympathetic,2
+4,suspicious,2
+5,loyal,2
+6,worry-prone,2
+7,reliable,2
+8,self-critical,2
+9,analytical,2
+10,overly sensitive,2
+11,detail-conscious,2
+12,unforgiving,2
+13,idealistic,2
+14,moody,2
+15,respectful,2
+16,unrealistic,2
+17,dependable,2
+18,frequently depressed,2
+19,deliberate,2
+20,judgmental,2
+21,emotional,2
+22,guilt-prone,2
+23,well-behaved,2
+24,thoughtful,2
+25,sincere,2
+26,hard to please,2
+27,creative,2
+28,self-righteous,2
+29,disciplined,2
+30,careful,2
+31,"Deliberate, accurate, and reliable.",2
+32,"Cry, feel hurt, and plan revenge.",2
+33,Is filled with people and purpose. ,2
+34,"Well-behaved, caring, and/or depressed.",2
+35,"Responsible, honest, and/or unforgiving.",2
+36,"Concerned, sensitive, and/or critical.",2
+37,Concerned about others' feelings and principles.,2
+38,"Concerned, empathetic, and loyal-regardless of the problem.",2
+39,"Deliberate, precise, and cautious.",2
+40,"Guilty, self-critical, and vulnerable to depression-I dwell on it.",2
+41,"I feel deeply hurt and find it almost impossible to forgive completely. Generally, getting even is not enough.",2
+42,"A healthy activity, which should be done right if it's to be done at all. Work should be done before one plays.",2
+43,Admired by others.,2
+44,"Understood, appreciated, and intimate.",2
+45,"Security, creativity, and purpose.",2
+1,inventive,3
+2,indecisive,3
+3,tolerant,3
+4,unsure,3
+5,contented,3
+6,silently stubborn,3
+7,kind,3
+8,reluctant,3
+9,easy-going,3
+10,shy,3
+11,a good listener,3
+12,unmotivated,3
+13,considerate,3
+14,passive,3
+15,patient,3
+16,directionless,3
+17,even-tempered,3
+18,ambivalent,3
+19,gentle,3
+20,boring,3
+21,agreeable,3
+22,unenthusiastic,3
+23,accepting,3
+24,uninvolved,3
+25,diplomatic,3
+26,lazy,3
+27,adaptable,3
+28,self-deprecating,3
+29,pleasant,3
+30,unproductive,3
+31,"Patient, adaptable, and tactful.",3
+32,"Become quiet, withdrawn, and often hold anger until I blow up over some minor issue later.",3
+33,Is free of pressure and stress.,3
+34,"Quiet, easygoing, and/or shy.",3
+35,"Accepting, contented, and/or unmotivated.",3
+36,"Permissive, easily persuaded, and/or often overwhelmed.",3
+37,"Silently stubborn, uncomfortable, and/or confused.",3
+38,"Supportive, patient, and a good listener.",3
+39,"Indecisive, timid, and reluctant.",3
+40,"Unsettled and fearful, but I keep it to myself.",3
+41,I am silently hurt and plan to get even and/or completely avoid the other person.,3
+42,A positive activity as long as it is something I enjoy and don't feel pressured to accomplish.,3
+43,Protected by others.,3
+44,"Respected, tolerant, and peaceful.",3
+45,Acceptance and safety.,3
+1,outgoing,4
+2,self-centered,4
+3,enthusiastic,4
+4,naive,4
+5,playful,4
+6,flighty,4
+7,sociable,4
+8,a teaser,4
+9,care-free,4
+10,obnoxious,4
+11,a party person,4
+12,vain,4
+13,happy,4
+14,impulsive,4
+15,fun-loving,4
+16,an interrupter,4
+17,trusting,4
+18,forgetful,4
+19,optimisitc,4
+20,undisciplined,4
+21,popular,4
+22,uncommitted,4
+23,spontaneous,4
+24,a show-off,4
+25,lively,4
+26,loud,4
+27,a performer,4
+28,disorganized,4
+29,charismatic,4
+30,afraid to face facts,4
+31,"Fun-loving, spirited, and casual.",4
+32,Distance myself and avoid further conflict.,4
+33,"Allows me to be playful, lighthearted, and optimistic.",4
+34,"Too talkative, happy, and/or playful.",4
+35,"Charismatic, positive, and/or obnoxious.",4
+36,"Playful, casual, and/or irresponsible.",4
+37,"Loud, uncomfortable, and/or compromising.",4
+38,"Nonjudgmental, optimistic, and downplaying the seriousness of the situation.",4
+39,"Impulsive, uncommitted, and inconsistent.",4
+40,Embarrassed and nervous-seeking to escape the situation.,4
+41,"I want to avoid confrontation, consider the situation not important enough to bother with, and/or seek other friends.",4
+42,"A necessary evil, much less inviting than play.",4
+43,Envied by others.,4
+44,"Praised, having fun, and feeling free.",4
+45,"Excitement, playful productivity, and the company of others.",4
