@@ -14,7 +14,7 @@ class CreateQuestionsTable extends Migration {
 	{
 		Schema::create('questions', function($table) {
             $table->increments('id');
-            $table->string('text', 100)->nullable();
+            $table->string('text', 200)->nullable();
         });
 	}
 
