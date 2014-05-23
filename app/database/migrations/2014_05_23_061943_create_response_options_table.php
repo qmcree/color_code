@@ -13,10 +13,12 @@ class CreateResponseOptionsTable extends Migration {
 	public function up()
 	{
 		Schema::create('response_options', function($table) {
+            $table->integer('response_id')->unsigned();
             $table->integer('option_id')->unsigned();
         });
 
         Schema::table('response_options', function($table) {
+            $table->foreign('response_id')->references('id')->on('responses');
             $table->foreign('option_id')->references('id')->on('options');
         });
 	}
