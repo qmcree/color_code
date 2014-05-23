@@ -8,7 +8,7 @@
         @foreach ($question->options as $option)
             <div class="radio">
                 <label>
-                    <input type="radio" name="options[]" value="{{{ $option->id }}}">
+                    <input type="radio" name="options[{{ $question->id }}]" value="{{ $option->id }}">
                     {{{ $option->text }}}
                 </label>
             </div>
