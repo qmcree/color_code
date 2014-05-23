@@ -13,7 +13,7 @@ class CreateResponseOptionsTable extends Migration {
 	public function up()
 	{
 		Schema::create('response_options', function($table) {
-            $table->tinyInteger('option_id')->unsigned();
+            $table->integer('option_id')->unsigned();
         });
 
         Schema::table('response_options', function($table) {

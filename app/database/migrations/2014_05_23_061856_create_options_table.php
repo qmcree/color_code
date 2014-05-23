@@ -14,8 +14,8 @@ class CreateOptionsTable extends Migration {
 	{
 		Schema::create('options', function($table) {
             $table->increments('id');
-            $table->tinyInteger('question_id')->unsigned();
-            $table->tinyInteger('category_id')->unsigned();
+            $table->integer('question_id')->unsigned();
+            $table->integer('category_id')->unsigned();
             $table->string('text', 100);
         });
 
