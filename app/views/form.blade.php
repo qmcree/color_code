@@ -5,7 +5,8 @@
     <div class="form-group">
         <h5>{{{ $question->text }}}</h5>
 
-        @foreach ($question->options as $option)
+        <?php $options = shuffle($question->options); ?>
+        @foreach ($options as $option)
             <div class="radio">
                 <label>
                     <input type="radio" name="options[{{ $question->id }}]" value="{{ $option->id }}">
