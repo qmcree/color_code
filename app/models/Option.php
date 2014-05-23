@@ -3,7 +3,7 @@
 
 class Option extends Eloquent
 {
-    protected $timestamps = false;
+    public $timestamps = false;
     protected $guarded = array('id');
 
     public function question()

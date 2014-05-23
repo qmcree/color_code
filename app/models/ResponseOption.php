@@ -3,7 +3,7 @@
 
 class ResponseOption extends Eloquent
 {
-    protected $timestamps = false;
+    public $timestamps = false;
     protected $fillable = array('option_id');
 
     public function option()

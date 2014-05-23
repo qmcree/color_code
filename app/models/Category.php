@@ -3,8 +3,8 @@
 
 class Category extends Eloquent
 {
+    public $timestamps = false;
     protected $table = 'categories';
-    protected $timestamps = false;
     protected $guarded = array('id');
 
     public function options()
