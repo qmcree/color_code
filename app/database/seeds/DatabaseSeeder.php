@@ -13,12 +13,10 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 
-        Category::createMany(array(
-            array('id' => 1, 'name' => 'Red'),
-            array('id' => 2, 'name' => 'Blue'),
-            array('id' => 3, 'name' => 'White'),
-            array('id' => 4, 'name' => 'Yellow'),
-        ));
+        Category::create(array('id' => 1, 'name' => 'Red'));
+        Category::create(array('id' => 2, 'name' => 'Blue'));
+        Category::create(array('id' => 3, 'name' => 'White'));
+        Category::create(array('id' => 4, 'name' => 'Yellow'));
 
         $questions = self::getQuestions();
         foreach ($questions as $question) {
