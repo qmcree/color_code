@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "lemp_composer"
+  config.vm.box = "lemp5-5_composer"
   config.vm.provision :shell, :path => "bootstrap.sh"
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.network :forwarded_port, host: 8080, guest: 80 # HTTP
