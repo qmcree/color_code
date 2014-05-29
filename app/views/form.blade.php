@@ -3,12 +3,11 @@
 @section('content')
     <h2>Hartman Personality Profile <small>The People Code</small></h2>
 
-    <p>The following information and self-assessment instrument come from Dr. Taylor Hartman’s <em>The People Code: It’s All About Your Innate Motive</em>.</p>
-
-    <p>Upon taking the Hartman Personality Profile, you will learn about yourself, your driving core motive and any secondary motives,
+    <p>The following information and self-assessment instrument come from Dr. Taylor Hartman’s <em>The People Code: It’s All About Your Innate Motive</em>.
+        Tests will enable you to learn about yourself, your driving core motive and any secondary motives,
         and about all the core motives and how this knowledge can help you grow and develop your relationships, personally and professionally.</p>
 
-    <h4>Enhance the accuracy of your results!</h4>
+    <h4>Ensure accurate results</h4>
     <ul>
         <li>Unless instructed otherwise, answer every question from your <strong>earliest recollections of how you were as a child</strong>.</li>
         <li>If you're unsure, <strong>ask others for feedback</strong>.</li>
@@ -21,7 +20,9 @@
             @foreach ($questions as $question)
             <li class="col-md-3">
                 <div class="form-group">
+                    @if (!empty($question->text))
                     <h5>{{{ $question->text }}}</h5>
+                    @endif
 
                     <?php
                     $options = $question->options->toArray();
