@@ -1,10 +1,6 @@
-body {
-  background-color: #2F4350;
-
-  &, html {
-    height: 100%;
-    width: 100%;
-  }
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
 #background {
@@ -13,9 +9,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -9999;
 
   > div {
     width: 25%;
+    height: 100%;
+    float: left;
   }
   .red {
     background-color: red;
