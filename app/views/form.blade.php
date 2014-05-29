@@ -42,6 +42,7 @@
             @endforeach
         </ol>
 
+        <h4>You're almost done! <small>Provide us some info., and we'll email you your results.</small></h4>
         <div class="row">
             <div class="form-group col-sm-6">
                 <label for="full-name">Your full name</label>
