@@ -18,7 +18,7 @@
     <form method="post" accept-charset="UTF-8">
         <ol class="row">
             @foreach ($questions as $question)
-            <li class="col-md-3">
+            <li class="col-sm-4">
                 <div class="form-group">
                     @if (!empty($question->text))
                     <h5>{{{ $question->text }}}</h5>
