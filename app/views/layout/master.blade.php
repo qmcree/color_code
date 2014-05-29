@@ -26,12 +26,6 @@
     @yield('content')
 </div>
 
-<div id="background">
-    <div class="red"></div>
-    <div class="blue"></div>
-    <div class="white"></div>
-    <div class="yellow"></div>
-</div>
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <script src="/packages/jquery/js/jquery.min.js"></script>
 <script src="/packages/bootstrap/js/bootstrap.min.js"></script>
