@@ -10,6 +10,6 @@ class HomeController extends BaseController {
 
     public function process()
     {
-
+        var_dump(Input::get('options'));
     }
 }
