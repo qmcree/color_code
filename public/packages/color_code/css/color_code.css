@@ -1,0 +1,13 @@
+body { background-color: #2F4350; }
+body, body html { height: 100%; width: 100%; }
+
+#background { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+#background > div { width: 25%; }
+#background .red { background-color: red; }
+#background .blue { background-color: blue; }
+#background .white { background-color: white; }
+#background .yellow { background-color: yellow; }
+
+#content { background-color: rgba(255, 255, 255, 0.8); padding-bottom: 40px; }
+
+form.questions ol li { height: 270px; }

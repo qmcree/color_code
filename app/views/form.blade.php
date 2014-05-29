@@ -11,11 +11,11 @@
     <ul>
         <li>Unless instructed otherwise, answer every question from your <strong>earliest recollections of how you were as a child</strong>.</li>
         <li>If you're unsure, <strong>ask others for feedback</strong>.</li>
-        <li>Choose answers that reflect most of your thoughts and/or actions.</li>
-        <li>Be honest and don't skew your answers. The test has been used by millions for years to produce reliable insights.</li>
+        <li>Choose answers that reflect most of your <strong>thoughts and/or actions</strong>.</li>
+        <li><strong>Be honest and don't skew your answers.</strong> The test has been used by millions for years to produce reliable insights.</li>
     </ul>
 
-    <form method="post" accept-charset="UTF-8">
+    <form method="post" accept-charset="UTF-8" class="questions">
         <ol class="row">
             @foreach ($questions as $question)
             <li class="col-sm-4">
@@ -42,13 +42,15 @@
             @endforeach
         </ol>
 
-        <div class="form-group">
-            <label for="full-name">Full name</label>
-            <input type="text" id="full-name" class="form-control" name="name" required />
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" class="form-control" name="email" required />
+        <div class="row">
+            <div class="form-group col-sm-6">
+                <label for="full-name">Your full name</label>
+                <input type="text" id="full-name" class="form-control" name="name" required />
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" name="email" required />
+            </div>
         </div>
         <button type="submit" class="btn btn-primary">Complete test</button>
         <button type="reset" class="btn btn-default">Reset</button>
