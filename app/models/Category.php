@@ -1,7 +1,8 @@
 <?php
 
+namespace ColorCode;
 
-class Category extends Eloquent
+class Category extends \Eloquent
 {
     public $timestamps = false;
     protected $table = 'categories';

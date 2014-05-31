@@ -1,7 +1,8 @@
 <?php
 
+namespace ColorCode;
 
-class Response extends Eloquent
+class Response extends \Eloquent
 {
     protected $guarded = array('id', 'created_at', 'updated_at');
 

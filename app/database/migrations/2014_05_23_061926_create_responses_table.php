@@ -16,6 +16,7 @@ class CreateResponsesTable extends Migration {
             $table->increments('id');
             $table->string('ip_address', 15);
             $table->string('name', 50);
+            $table->string('email', 50);
             $table->timestamps();
         });
 	}

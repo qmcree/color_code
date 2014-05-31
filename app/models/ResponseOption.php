@@ -1,7 +1,8 @@
 <?php
 
+namespace ColorCode;
 
-class ResponseOption extends Eloquent
+class ResponseOption extends \Eloquent
 {
     public $timestamps = false;
     protected $fillable = array('option_id');

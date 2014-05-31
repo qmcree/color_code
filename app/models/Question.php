@@ -1,7 +1,8 @@
 <?php
 
+namespace ColorCode;
 
-class Question extends Eloquent
+class Question extends \Eloquent
 {
     public $timestamps = false;
     protected $guarded = array('id');
