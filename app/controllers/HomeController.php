@@ -45,14 +45,18 @@ class HomeController extends BaseController {
         $response = ColorCode\Response::with('responseOptions.option.category')->find($responseId);
 
         $tally = array();
-        foreach ($response->responseOptions as $i => $responseOption) {
+        foreach ($response->responseOptions as $responseOption) {
             $categoryName = $responseOption->option->category->name;
+
+            $tally[$categoryName] = $tally[$categoryName] + 1;
+            /*
             if (isset($tally[$categoryName])) {
                 $tally[$categoryName]++;
             } else {
                 array_push($tally, $categoryName);
                 $tally[$categoryName] = 1;
             }
+            */
         }
 
         var_dump($tally);
