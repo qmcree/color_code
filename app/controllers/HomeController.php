@@ -28,7 +28,7 @@ class HomeController extends BaseController {
             DB::commit();
         });
 
-        $tally = $this->getTally($response);
+        $tally = $this->getTally($response->id);
 
         var_dump($tally);
         exit;
@@ -37,14 +37,14 @@ class HomeController extends BaseController {
     /**
      * Gets tally of categories.
      *
-     * @param ColorCode\Response $response
+     * @param integer $responseId
      * @return array
      */
-    protected function getTally($response)
+    protected function getTally($responseId)
     {
-        $response = $response->with('responseOptions.option.category')->get();
+        $response = ColorCode\Response::with('responseOptions.option.category')->find($responseId);
 
-        var_dump($response);
+        var_dump($response->responseOptions[0]->option->category->name);
         exit;
     }
 }
