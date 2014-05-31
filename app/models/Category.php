@@ -10,6 +10,6 @@ class Category extends \Eloquent
 
     public function options()
     {
-        return $this->hasMany('Option');
+        return $this->hasMany('ColorCode\Option');
     }
 } 

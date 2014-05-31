@@ -9,16 +9,16 @@ class Option extends \Eloquent
 
     public function question()
     {
-        return $this->belongsTo('Question');
+        return $this->belongsTo('ColorCode\Question');
     }
 
     public function category()
     {
-        return $this->belongsTo('Category');
+        return $this->belongsTo('ColorCode\Category');
     }
 
     public function responseOptions()
     {
-        return $this->hasMany('ResponseOption');
+        return $this->hasMany('ColorCode\ResponseOption');
     }
 } 

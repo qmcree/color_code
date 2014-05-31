@@ -9,11 +9,11 @@ class ResponseOption extends \Eloquent
 
     public function option()
     {
-        return $this->belongsTo('Option');
+        return $this->belongsTo('ColorCode\Option');
     }
 
     public function response()
     {
-        return $this->belongsTo('Response');
+        return $this->belongsTo('ColorCode\Response');
     }
 } 

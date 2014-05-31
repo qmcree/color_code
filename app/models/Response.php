@@ -8,6 +8,6 @@ class Response extends \Eloquent
 
     public function responseOptions()
     {
-        return $this->hasMany('ResponseOption');
+        return $this->hasMany('ColorCode\ResponseOption');
     }
 } 
