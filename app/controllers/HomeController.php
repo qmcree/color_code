@@ -48,18 +48,15 @@ class HomeController extends BaseController {
         foreach ($response->responseOptions as $responseOption) {
             $categoryName = $responseOption->option->category->name;
 
-            $tally[$categoryName] = $tally[$categoryName] + 1;
-            /*
-            if (isset($tally[$categoryName])) {
-                $tally[$categoryName]++;
-            } else {
+            if (!array_key_exists($categoryName, $tally)) {
                 array_push($tally, $categoryName);
                 $tally[$categoryName] = 1;
+            } else {
+                $tally[$categoryName]++;
             }
-            */
         }
 
-        var_dump($tally);
+        var_dump($tally['White']);
         exit;
     }
 }
