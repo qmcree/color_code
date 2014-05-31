@@ -13,14 +13,14 @@ class DatabaseSeeder extends Seeder {
 
 		// $this->call('UserTableSeeder');
 
-        Category::create(array('id' => 1, 'name' => 'Red'));
-        Category::create(array('id' => 2, 'name' => 'Blue'));
-        Category::create(array('id' => 3, 'name' => 'White'));
-        Category::create(array('id' => 4, 'name' => 'Yellow'));
+        ColorCode\Category::create(array('id' => 1, 'name' => 'Red'));
+        ColorCode\Category::create(array('id' => 2, 'name' => 'Blue'));
+        ColorCode\Category::create(array('id' => 3, 'name' => 'White'));
+        ColorCode\Category::create(array('id' => 4, 'name' => 'Yellow'));
 
         $questions = self::getQuestions();
         foreach ($questions as $question) {
-            Question::create(array(
+            ColorCode\Question::create(array(
                 'id' => $question[0],
                 'text' => $question[1],
             ));
@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder {
 
         $options = self::getOptions();
         foreach ($options as $option) {
-            Option::create(array(
+            ColorCode\Option::create(array(
                 'question_id' => $option[0],
                 'text' => $option[1],
                 'category_id' => $option[2],
