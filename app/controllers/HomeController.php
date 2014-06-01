@@ -32,12 +32,11 @@ class HomeController extends BaseController {
 
         // make predominant category first
         arsort($tally);
-        $sortedCategories = array_keys($tally);
 
         return View::make('results', array(
             'name' => Input::get('name'),
             'tally' => $tally,
-            'predominant' => $sortedCategories[0],
+            'predominant' => $this->getPredominant($tally),
         ));
     }
 
@@ -63,5 +62,23 @@ class HomeController extends BaseController {
         }
 
         return $tally;
+    }
+
+    /**
+     * Determines predominant category based on tally.
+     *
+     * @param $tally
+     * @return string
+     */
+    protected function getPredominant($tally) {
+        $sortedCategories = array_keys($tally);
+        $values = array_values($tally);
+
+        // Predominant is WHITE if range of highest score and lowest score is <= 3.
+        if (($values[0] - end($values)) <= 3) {
+            return 'White';
+        } else {
+            return $sortedCategories[0];
+        }
     }
 }
