@@ -36,7 +36,7 @@ class HomeController extends BaseController {
         return View::make('results', array(
             'name' => Input::get('name'),
             'tally' => $tally,
-            'predominant' => $tally[0],
+            'predominant' => array_keys($tally)[0],
         ));
     }
 
@@ -55,7 +55,6 @@ class HomeController extends BaseController {
             $categoryName = $responseOption->option->category->name;
 
             if (!array_key_exists($categoryName, $tally)) {
-                array_push($tally, $categoryName);
                 $tally[$categoryName] = 1;
             } else {
                 $tally[$categoryName]++;
