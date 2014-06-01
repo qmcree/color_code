@@ -1,20 +1,6 @@
 @extends('layout.master')
 
 @section('content')
-    <h2>Hartman Personality Profile <small>The People Code</small></h2>
-
-    <p>The following information and self-assessment instrument come from Dr. Taylor Hartman’s <em>The People Code: It’s All About Your Innate Motive</em>.
-        Tests will enable you to learn about yourself, your driving core motive and any secondary motives,
-        and about all the core motives and how this knowledge can help you grow and develop your relationships, personally and professionally.</p>
-
-    <h4>Ensure accurate results</h4>
-    <ul>
-        <li>Unless instructed otherwise, answer every question from your <strong>earliest recollections of how you were as a child</strong>.</li>
-        <li>If you're unsure, <strong>ask others for feedback</strong>.</li>
-        <li>Choose answers that reflect most of your <strong>thoughts and/or actions</strong>.</li>
-        <li><strong>Be honest and don't skew your answers.</strong> The test has been used by millions for years to produce reliable insights.</li>
-    </ul>
-
     <form method="post" accept-charset="UTF-8" class="questions">
         <ol class="row">
             @foreach ($questions as $question)

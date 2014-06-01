@@ -29,9 +29,6 @@ class HomeController extends BaseController {
         });
 
         $tally = $this->getTally($response->id);
-
-        var_dump($tally);
-        exit;
     }
 
     /**
@@ -56,7 +53,6 @@ class HomeController extends BaseController {
             }
         }
 
-        var_dump($tally['White']);
-        exit;
+        return $tally;
     }
 }
