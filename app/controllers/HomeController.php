@@ -29,6 +29,15 @@ class HomeController extends BaseController {
         });
 
         $tally = $this->getTally($response->id);
+
+        // make predominant category first
+        arsort($tally);
+
+        return View::make('results', array(
+            'name' => Input::get('name'),
+            'tally' => $tally,
+            'predominant' => $tally[0],
+        ));
     }
 
     /**
