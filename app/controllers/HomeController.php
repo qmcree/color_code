@@ -32,11 +32,12 @@ class HomeController extends BaseController {
 
         // make predominant category first
         arsort($tally);
+        $sortedCategories = array_keys($tally);
 
         return View::make('results', array(
             'name' => Input::get('name'),
             'tally' => $tally,
-            'predominant' => array_keys($tally)[0],
+            'predominant' => $sortedCategories[0],
         ));
     }
 
