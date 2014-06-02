@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-    <h3>Your predominant color is <span class="color" style="color: {{ strtolower($predominant) }}">{{ strtoupper($predominant) }}</span></h3>
+    <h3>Your predominant color is <span class="color {{ strtolower($predominant) }}">{{ strtoupper($predominant) }}</span></h3>
 
     <div id="results-chart"></div>
 
