@@ -2,6 +2,22 @@ html, body { height: 100%; width: 100%; }
 
 body { background: url("/packages/color_code/images/bg.png") repeat; }
 
-#content { background-color: rgba(255, 255, 255, 0.9); padding-bottom: 40px; }
+#content { background-color: rgba(255, 255, 255, 0.9); padding-bottom: 40px; border: 3px solid rgba(0, 0, 0, 0.1); border-top-width: 0; }
+
+.red { color: red; }
+
+.bg-red { background-color: red; }
+
+.blue { color: blue; }
+
+.bg-blue { background-color: blue; color: white; }
+
+.white { color: white; }
+
+.bg-white { background-color: white; }
+
+.yellow { color: yellow; }
+
+.bg-yellow { background-color: yellow; }
 
 form.questions ol li { height: 270px; padding: 0 40px; }
