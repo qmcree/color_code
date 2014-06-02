@@ -8,8 +8,7 @@ var colorcode = {
             setTimeout(function() {
                 google.load('visualization', '1', {
                     packages: ['corechart'],
-                    //callback: callback()
-                    callback: function() { alert('waited 2 secs.'); }
+                    callback: callback()
                 });
             }, 2000);
         },
