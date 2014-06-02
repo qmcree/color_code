@@ -1,13 +1,9 @@
 @extends('layout.master')
 
 @section('content')
-    <h3><strong>{{{ $name }}}</strong>, your predominant color is <span class="color" style="color: {{ strtolower($predominant) }}">
-            {{ strtoupper($predominant) }}</span></h3>
-    <ul>
-        @foreach ($tally as $category => $count)
-        <li>{{ $category }} - {{ $count }}</li>
-        @endforeach
-    </ul>
+    <h3>Your predominant color is <span class="color" style="color: {{ strtolower($predominant) }}">{{ strtoupper($predominant) }}</span></h3>
+
+    <div id="results-chart"></div>
 
     <div class="row">
         <div class="col-sm-3 bg-red">
@@ -67,4 +63,12 @@
             lots of friends, but only on a superficial level. Yellows may have difficulty getting down to business.</p>
         </div>
     </div>
+
+    <script type="application/json" id="results-data">
+        {{ json_encode($tally, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES); }}
+    </script>
+    <script type="text/plain" id="results-name">
+        {{{ $name }}}
+    </script>
+    <script src="https://www.google.com/jsapi"></script>
 @stop
