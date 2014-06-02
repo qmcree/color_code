@@ -63,6 +63,10 @@
             lots of friends, but only on a superficial level. Yellows may have difficulty getting down to business.</p>
         </div>
     </div>
+@stop
+
+@section('scripts')
+    @parent
 
     <script type="application/json" id="results-data">
         {{ json_encode($tally, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES); }}
@@ -70,5 +74,5 @@
     <script type="text/plain" id="results-name">
         {{{ $name }}}
     </script>
-    <!-- <script src="https://www.google.com/jsapi"></script> -->
+    <script src="https://www.google.com/jsapi"></script>
 @stop

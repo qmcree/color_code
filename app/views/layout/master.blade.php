@@ -28,9 +28,12 @@
     @yield('content')
 </div>
 
+@section('scripts')
 <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
 <script src="/packages/jquery/js/jquery.min.js"></script>
 <script src="/packages/bootstrap/js/bootstrap.min.js"></script>
 <script src="/packages/color_code/js/color_code.js"></script>
+@show
+
 </body>
 </html>
