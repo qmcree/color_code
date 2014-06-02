@@ -45,6 +45,12 @@ body {
 .bg-yellow {
   background-color: yellow;
 }
+h3 span.color {
+  &.white {
+    color: #CCCCCC;
+    background-color: #F6F6F6;
+  }
+}
 
 form.questions {
   ol {
