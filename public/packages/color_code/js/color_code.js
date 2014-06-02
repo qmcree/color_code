@@ -5,8 +5,12 @@ var colorcode = {
         NAME_SELECTOR: '#results-name',
 
         load: function(callback) {
-            google.load("visualization", "1", {packages:["corechart"]});
-            google.setOnLoadCallback(callback);
+            setTimeout(function() {
+                google.load('visualization', '1', {
+                    packages: ['corechart'],
+                    callback: callback()
+                });
+            }, 2000);
         },
         draw: function() {
             var data = jQuery(this.DATA_SELECTOR).html().parseJSON().toArray(),
