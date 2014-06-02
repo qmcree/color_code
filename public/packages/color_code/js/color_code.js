@@ -33,7 +33,7 @@ var colorcode = {
         }
     },
     initialize: function() {
-        //this.chart.initialize();
+        this.chart.initialize();
     }
 };
 
