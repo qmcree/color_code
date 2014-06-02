@@ -22,7 +22,7 @@ var colorcode = {
             // context is within callback.
             var self = colorcode.chart;
 
-            var data = jQuery.makeArray(jQuery.parseJSON(jQuery(self.DATA_SELECTOR).html())),
+            var data = jQuery.parseJSON(jQuery(self.DATA_SELECTOR).html()),
                 dataTable = google.visualization.arrayToDataTable(data),
                 chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
 
