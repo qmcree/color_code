@@ -15,6 +15,9 @@ class HomeController extends BaseController {
         // make predominant category first
         $tally = arsort($response->tally);
 
+        var_dump($tally);
+        exit;
+
         return View::make('results', array(
             'name' => Input::get('name'),
             'tally' => $tally,
