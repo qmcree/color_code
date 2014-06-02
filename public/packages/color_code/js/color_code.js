@@ -36,7 +36,8 @@ var colorcode = {
                 title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html(),
                 colors: ['red', 'blue', '#F6F6F6', 'yellow'],
                 legend: 'none',
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                fontSize: 16
             });
         },
         initialize: function() {
