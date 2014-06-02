@@ -12,15 +12,9 @@ class HomeController extends BaseController {
     {
         $response = new ColorCode\Lib\ResponseLib();
 
-        // make predominant category first
-        $tally = arsort($response->tally);
-
-        var_dump($tally);
-        exit;
-
         return View::make('results', array(
             'name' => Input::get('name'),
-            'tally' => $tally,
+            'tally' => $response->tally,
             'predominant' => $response->predominant,
         ));
     }

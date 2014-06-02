@@ -62,6 +62,8 @@ class ResponseLib
                 $tally[$categoryName]++;
             }
         }
+        // make predominant category first
+        arsort($tally);
 
         $this->tally = $tally;
     }
