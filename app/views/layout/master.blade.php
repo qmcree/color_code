@@ -26,6 +26,9 @@
     @include('layout.partial.alert')
 
     @yield('content')
+
+    <p class="copyright text-muted text-center">A little Web app by <a href="http://www.qmcree.com">Quentin McRee</a>. Personality assessment
+        <span class="glyphicon glyphicon-copyright-mark"></span> Dr. Taylor Hartman and Robert S. Hartman Institute.</p>
 </div>
 
 @section('scripts')
