@@ -4,6 +4,11 @@ var colorcode = {
         CHART_SELECTOR: '#results-chart',
         NAME_SELECTOR: '#results-name',
 
+        /**
+         * Loads Google visualization API.
+         *
+         * @param {function} callback
+         */
         load: function(callback) {
             setTimeout(function() {
                 google.load('visualization', '1', {
@@ -12,13 +17,19 @@ var colorcode = {
                 });
             }, 2000);
         },
+        /**
+         * Draws chart.
+         */
         draw: function() {
-            var data = jQuery(this.DATA_SELECTOR).html().parseJSON().toArray(),
+            // because this is called by callback.
+            var self = colorcode.chart;
+
+            var data = jQuery(self.DATA_SELECTOR).html().parseJSON().toArray(),
                 dataTable = google.visualization.arrayToDataTable(data),
-                chart = new google.visualization.PieChart(jQuery(this.CHART_SELECTOR).get()[0]);
+                chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
 
             chart.draw(dataTable, {
-                title: 'Detailed results for ' + jQuery(this.NAME_SELECTOR).html()
+                title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html()
             });
         },
         initialize: function() {
