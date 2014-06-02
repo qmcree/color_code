@@ -23,7 +23,10 @@ var colorcode = {
             var self = colorcode.chart;
 
             var data = jQuery.parseJSON(jQuery(self.DATA_SELECTOR).html()),
-                dataTable = new google.visualization.DataTable(data),
+                dataTable = google.visualization.arrayToDataTable([
+                    ['Color', 'Score'],
+                    ['Red', 50]
+                ]),
                 chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
 
             chart.draw(dataTable, {
