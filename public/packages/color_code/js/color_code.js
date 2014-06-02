@@ -11,7 +11,7 @@ var colorcode = {
             setTimeout(function() {
                 google.load('visualization', '1', {
                     packages: ['corechart'],
-                    callback: colorcode.chart.draw()
+                    callback: colorcode.chart.draw
                 });
             }, 2000);
         },
@@ -28,8 +28,6 @@ var colorcode = {
             });
         },
         initialize: function() {
-            var self = this;
-
             if (jQuery(this.CHART_SELECTOR)) {
                 this.load();
             }
