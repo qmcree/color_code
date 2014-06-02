@@ -13,7 +13,7 @@ var colorcode = {
                     packages: ['corechart'],
                     callback: colorcode.chart.draw
                 });
-            }, 2000);
+            }, 500);
         },
         /**
          * Draws chart.
