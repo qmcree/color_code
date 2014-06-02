@@ -19,7 +19,7 @@ var colorcode = {
          * Draws chart.
          */
         draw: function() {
-            var data = jQuery(this.DATA_SELECTOR).html().parseJSON().toArray(),
+            var data = jQuery.makeArray(jQuery.parseJSON(jQuery(this.DATA_SELECTOR).html())),
                 dataTable = google.visualization.arrayToDataTable(data),
                 chart = new google.visualization.PieChart(jQuery(this.CHART_SELECTOR).get()[0]);
 
