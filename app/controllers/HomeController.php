@@ -10,7 +10,7 @@ class HomeController extends BaseController {
 
     public function process()
     {
-        $response = new ColorCode\Lib\Response();
+        $response = new ColorCode\Lib\ResponseLib();
 
         // make predominant category first
         $tally = arsort($response->tally);

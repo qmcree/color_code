@@ -4,7 +4,7 @@ namespace ColorCode\Lib;
 
 use ColorCode;
 
-class Response
+class ResponseLib
 {
     public $responseId = 0;
     public $tally = array();
@@ -24,21 +24,21 @@ class Response
     protected function save()
     {
         $response = new ColorCode\Response();
-        $response->ip_address = Request::getClientIp();
-        $response->name = Input::get('name');
-        $response->email = Input::get('email');
+        $response->ip_address = \Request::getClientIp();
+        $response->name = \Input::get('name');
+        $response->email = \Input::get('email');
 
-        DB::transaction(function() use ($response) {
+        \DB::transaction(function() use ($response) {
             $response->save();
 
-            foreach (Input::get('options') as $optionId) {
+            foreach (\Input::get('options') as $optionId) {
                 ColorCode\ResponseOption::create(array(
                     'response_id' => $response->id,
                     'option_id' => $optionId,
                 ));
             }
 
-            DB::commit();
+            \DB::commit();
         });
 
         $this->responseId = $response->id;
