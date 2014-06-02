@@ -19,12 +19,15 @@ var colorcode = {
          * Draws chart.
          */
         draw: function() {
-            var data = jQuery.makeArray(jQuery.parseJSON(jQuery(this.DATA_SELECTOR).html())),
+            // context is within callback.
+            var self = colorcode.chart;
+
+            var data = jQuery.makeArray(jQuery.parseJSON(jQuery(self.DATA_SELECTOR).html())),
                 dataTable = google.visualization.arrayToDataTable(data),
-                chart = new google.visualization.PieChart(jQuery(this.CHART_SELECTOR).get()[0]);
+                chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
 
             chart.draw(dataTable, {
-                title: 'Detailed results for ' + jQuery(this.NAME_SELECTOR).html()
+                title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html()
             });
         },
         initialize: function() {
