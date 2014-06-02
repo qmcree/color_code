@@ -33,7 +33,8 @@ var colorcode = {
                 chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
 
             chart.draw(dataTable, {
-                title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html()
+                title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html(),
+                colors: ['red', 'blue', 'white', 'yellow']
             });
         },
         initialize: function() {
