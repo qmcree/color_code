@@ -6,7 +6,7 @@ var colorcode = {
 
         load: function(callback) {
             google.load("visualization", "1", {packages:["corechart"]});
-            google.setOnLoadCallback(callback);
+            //google.setOnLoadCallback(callback);
         },
         draw: function() {
             var data = jQuery(this.DATA_SELECTOR).html().parseJSON().toArray(),
@@ -28,7 +28,7 @@ var colorcode = {
         }
     },
     initialize: function() {
-        //this.chart.initialize();
+        this.chart.initialize();
     }
 };
 
