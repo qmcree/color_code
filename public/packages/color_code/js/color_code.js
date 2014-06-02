@@ -35,7 +35,8 @@ var colorcode = {
             chart.draw(dataTable, {
                 title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html(),
                 colors: ['red', 'blue', '#F6F6F6', 'yellow'],
-                legend: 'none'
+                legend: 'none',
+                backgroundColor: 'transparent'
             });
         },
         initialize: function() {
