@@ -67,8 +67,8 @@
     <script type="application/json" id="results-data">
         {{ json_encode($tally, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES); }}
     </script>
-    <!-- <script type="text/plain" id="results-name">
+    <script type="text/plain" id="results-name">
         {{{ $name }}}
-    </script> -->
-    <script src="https://www.google.com/jsapi"></script>
+    </script>
+    <!-- <script src="https://www.google.com/jsapi"></script> -->
 @stop
