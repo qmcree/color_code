@@ -74,5 +74,5 @@
     <script type="text/plain" id="results-name">
         {{{ $name }}}
     </script>
-    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 @stop
