@@ -14,9 +14,9 @@ body { background: url("/packages/color_code/images/bg.png") repeat; }
 
 .bg-blue { background-color: blue; color: white; }
 
-.white { color: white; }
+.white { color: #F6F6F6; }
 
-.bg-white { background-color: white; }
+.bg-white { background-color: #F6F6F6; }
 
 .yellow { color: yellow; }
 
