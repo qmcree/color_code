@@ -6,14 +6,12 @@ var colorcode = {
 
         /**
          * Loads Google visualization API.
-         *
-         * @param {function} callback
          */
-        load: function(callback) {
+        load: function() {
             setTimeout(function() {
                 google.load('visualization', '1', {
                     packages: ['corechart'],
-                    callback: callback()
+                    callback: colorcode.chart.draw()
                 });
             }, 2000);
         },
@@ -21,24 +19,19 @@ var colorcode = {
          * Draws chart.
          */
         draw: function() {
-            // because this is called by callback.
-            var self = colorcode.chart;
-
-            var data = jQuery(self.DATA_SELECTOR).html().parseJSON().toArray(),
+            var data = jQuery(this.DATA_SELECTOR).html().parseJSON().toArray(),
                 dataTable = google.visualization.arrayToDataTable(data),
-                chart = new google.visualization.PieChart(jQuery(self.CHART_SELECTOR).get()[0]);
+                chart = new google.visualization.PieChart(jQuery(this.CHART_SELECTOR).get()[0]);
 
             chart.draw(dataTable, {
-                title: 'Detailed results for ' + jQuery(self.NAME_SELECTOR).html()
+                title: 'Detailed results for ' + jQuery(this.NAME_SELECTOR).html()
             });
         },
         initialize: function() {
             var self = this;
 
             if (jQuery(this.CHART_SELECTOR)) {
-                this.load(function() {
-                    self.draw();
-                });
+                this.load();
             }
         }
     },
