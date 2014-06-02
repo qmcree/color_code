@@ -6,7 +6,7 @@ body { background: url("/packages/color_code/images/bg.png") repeat; }
 
 .red { color: red; }
 
-.bg-red { background-color: red; }
+.bg-red { background-color: red; color: white; }
 
 .blue { color: blue; }
 
