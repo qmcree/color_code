@@ -18,7 +18,7 @@ class HomeController extends BaseController {
         return View::make('results', array(
             'name' => Input::get('name'),
             'tally' => $tally,
-            'predominant' => $response->tally,
+            'predominant' => $response->predominant,
         ));
     }
 
