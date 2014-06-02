@@ -66,6 +66,8 @@
 @stop
 
 @section('scripts')
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
     @parent
 
     <script type="application/json" id="results-data">
@@ -74,5 +76,4 @@
     <script type="text/plain" id="results-name">
         {{{ $name }}}
     </script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 @stop
