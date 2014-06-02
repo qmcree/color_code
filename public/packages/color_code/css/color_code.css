@@ -22,6 +22,7 @@ body { background: url("/packages/color_code/images/bg.png") repeat; }
 
 .bg-yellow { background-color: yellow; }
 
-h3 span.color.white { color: #CCCCCC; background-color: #F6F6F6; }
+h3.white { color: #CCCCCC; background-color: #F6F6F6; }
+h3 span.color { text-transform: uppercase; font-weight: bold; }
 
 form.questions ol li { height: 270px; padding: 0 40px; }

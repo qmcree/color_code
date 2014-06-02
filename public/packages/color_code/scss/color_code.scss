@@ -45,10 +45,14 @@ body {
 .bg-yellow {
   background-color: yellow;
 }
-h3 span.color {
+h3 {
   &.white {
     color: #CCCCCC;
     background-color: #F6F6F6;
+  }
+  span.color {
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }
 
