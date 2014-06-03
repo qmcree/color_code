@@ -89,6 +89,14 @@ class Response
      */
     public function email()
     {
+        $data = array(
+            'name' => \Input::get('name'),
+            'tally' => $this->tally,
+            'predominant' => $this->predominant,
+        );
 
+        \Mail::send('email.results', $data, function($email) {
+            $email->to(\Input::get('email'), \Input::get('name'))->subject('Your Color Code detailed results');
+        });
     }
 } 
