@@ -10,7 +10,8 @@ class HomeController extends BaseController {
 
     public function process()
     {
-        $response = new ColorCode\Lib\ResponseLib();
+        $response = new ColorCode\Lib\Response();
+        $response->email();
 
         return View::make('results', array(
             'name' => Input::get('name'),
@@ -18,6 +19,4 @@ class HomeController extends BaseController {
             'predominant' => $response->predominant,
         ));
     }
-
-
 }

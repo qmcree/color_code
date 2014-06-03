@@ -4,7 +4,7 @@ namespace ColorCode\Lib;
 
 use ColorCode;
 
-class ResponseLib
+class Response
 {
     public $responseId = 0;
     public $tally = array();
@@ -82,5 +82,13 @@ class ResponseLib
         } else {
             $this->predominant = $sortedCategories[0];
         }
+    }
+
+    /**
+     * Emails results.
+     */
+    public function email()
+    {
+
     }
 } 
