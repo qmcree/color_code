@@ -96,7 +96,7 @@ class Response
         );
 
         \Mail::send('email.results', $data, function($email) {
-            $email->to(\Input::get('email'), \Input::get('name'))->subject('Your Color Code detailed results');
+            $email->to(\Input::get('email'), \Input::get('name'))->subject('Your detailed results');
         });
     }
 } 
