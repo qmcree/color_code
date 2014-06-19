@@ -51,10 +51,7 @@ var colorcode = {
     }
 };
 
-// load scripts.
-$script(['/packages/jquery/js/jquery.min.js', '/packages/bootstrap/js/bootstrap.min.js'], 'libraries');
-
-$script.ready('libraries', function() {
+$script.ready(['jquery', 'bootstrap'], function() {
     jQuery(document).ready(function() {
         colorcode.initialize();
     });

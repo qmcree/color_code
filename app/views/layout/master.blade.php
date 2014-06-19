@@ -31,7 +31,7 @@
 
 @section('scripts')
 <script src="/packages/script_js/js/script.min.js"></script>
-<script src="/packages/color_code/js/color_code.js"></script>
+<script src="/packages/color_code/js/load.js"></script>
 @show
 
 </body>
