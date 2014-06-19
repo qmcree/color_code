@@ -8,12 +8,12 @@ var colorcode = {
          * Loads Google visualization API.
          */
         load: function() {
-            setTimeout(function() {
+            $script('https://www.google.com/jsapi', function() {
                 google.load('visualization', '1', {
                     packages: ['corechart'],
                     callback: colorcode.chart.draw
                 });
-            }, 500);
+            });
         },
         /**
          * Draws chart.
@@ -41,7 +41,7 @@ var colorcode = {
             });
         },
         initialize: function() {
-            if (jQuery(this.CHART_SELECTOR)) {
+            if (jQuery(this.CHART_SELECTOR).length) {
                 this.load();
             }
         }
@@ -51,6 +51,11 @@ var colorcode = {
     }
 };
 
-jQuery(document).ready(function() {
-    colorcode.initialize();
+// load scripts.
+$script(['/packages/jquery/js/jquery.min.js', '/packages/bootstrap/js/bootstrap.min.js'], 'libraries');
+
+$script.ready('libraries', function() {
+    jQuery(document).ready(function() {
+        colorcode.initialize();
+    });
 });

@@ -12,8 +12,6 @@
 
     <link rel="stylesheet" type="text/css" href="/packages/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/packages/color_code/css/color_code.css" />
-
-    <script src="/packages/script_js/js/script.min.js" />
 </head>
 <body>
 <!--[if lte IE 8]>
@@ -32,9 +30,7 @@
 </div>
 
 @section('scripts')
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-<script src="/packages/jquery/js/jquery.min.js"></script>
-<script src="/packages/bootstrap/js/bootstrap.min.js"></script>
+<script src="/packages/script_js/js/script.min.js"></script>
 <script src="/packages/color_code/js/color_code.js"></script>
 @show
 
