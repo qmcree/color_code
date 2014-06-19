@@ -13,7 +13,6 @@
     <link rel="stylesheet" type="text/css" href="/packages/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="/packages/color_code/css/color_code.css" />
 
-    <!-- <script src="//modernizr.com/downloads/modernizr-latest.js"></script> --> <!-- @todo Build production version. -->
     <script src="/packages/script_js/js/script.min.js" />
 </head>
 <body>
