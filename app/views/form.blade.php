@@ -51,6 +51,7 @@
                 <input type="email" id="email" class="form-control" name="email" required />
             </div>
         </div>
+        <input type="hidden" name="_token" value="{{ csrf_token(); }}" />
         <button type="submit" class="btn btn-primary">Complete test</button>
         <button type="reset" class="btn btn-default">Reset</button>
     </form>

@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'HomeController@showForm');
-Route::post('/', 'HomeController@process');
+Route::post('/', ['before' => 'csrf', 'HomeController@process']);
