@@ -2,12 +2,22 @@
 
 class HomeController extends BaseController {
 
-	public function showForm()
+    /**
+     * Renders form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showForm()
 	{
         $questions = ColorCode\Question::with('options')->get();
 		return View::make('form', array('questions' => $questions));
 	}
 
+    /**
+     * Inserts submission to DB, emails results, and redirects to view results.
+     *
+     * @return mixed
+     */
     public function process()
     {
         $response = new ColorCode\Lib\Response();
@@ -17,6 +27,8 @@ class HomeController extends BaseController {
     }
 
     /**
+     * Renders results from flashed data in session.
+     *
      * @return \Illuminate\View\View
      */
     public function showResults()
