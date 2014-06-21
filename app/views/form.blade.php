@@ -30,7 +30,7 @@
                     @foreach ($options as $option)
                     <div class="radio">
                         <label>
-                            <?php $checked = in_array($option['id'], Input::old('options')) ? 'checked' : ''; ?>
+                            <?php $checked = in_array($option['id'], Input::old('options', [])) ? 'checked' : ''; ?>
                             <input type="radio" name="options[{{ $question->id }}]" value="{{ $option['id'] }}" required {{ $checked }} />
                             {{{ $option['text'] }}}
                         </label>
