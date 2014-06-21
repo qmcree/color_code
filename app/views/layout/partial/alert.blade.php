@@ -16,8 +16,12 @@
 </div>
 @endif
 
-@if (isset($_danger) && !is_null($_danger))
+@if ($errors->has())
 <div class="alert alert-danger">
-    {{ $_danger }}
+    <ul>
+        @foreach ($errors->all('<li>:message</li>') as $error)
+            {{ $error }}
+        @endforeach
+    </ul>
 </div>
 @endif

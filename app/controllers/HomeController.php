@@ -14,16 +14,34 @@ class HomeController extends BaseController {
 	}
 
     /**
-     * Inserts submission to DB, emails results, and redirects to view results.
+     * Validates input, inserts submission to DB, emails results, and redirects to view results.
      *
      * @return mixed
      */
     public function process()
     {
-        $response = new ColorCode\Lib\Response();
-        $response->email();
+        $validator = $this->validate();
+        if ($validator->passes()) {
+            $response = new ColorCode\Lib\Response();
+            $response->email();
+            return Redirect::action('HomeController@showResults')->with('response', $response);
+        } else {
+            return Redirect::action('HomeController@showForm')->withErrors($validator)->withInput();
+        }
+    }
 
-        return Redirect::action('HomeController@showResults')->with('response', $response);
+    /**
+     * Validates input.
+     *
+     * @return Validator
+     */
+    private function validate()
+    {
+        return Validator::make(Input::all(), [
+            'options' => ColorCode\Option::$rules['options'],
+            'name' => ColorCode\Response::$rules['name'],
+            'email' => ColorCode\Response::$rules['email'],
+        ]);
     }
 
     /**

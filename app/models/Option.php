@@ -5,6 +5,9 @@ namespace ColorCode;
 class Option extends \Eloquent
 {
     public $timestamps = false;
+    public static $rules = [
+        'options' => ['required', 'array', 'size:45'], // @todo define size dynamically.
+    ];
     protected $guarded = array('id');
 
     public function question()
