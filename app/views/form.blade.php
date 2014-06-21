@@ -56,6 +56,4 @@
         <button type="submit" class="btn btn-primary">Complete test</button>
         <button type="reset" class="btn btn-default">Reset</button>
     </form>
-
-    {{ var_dump(Input::old('options')) }}
 @stop
