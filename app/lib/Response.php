@@ -9,6 +9,7 @@ class Response
     public $responseId = 0;
     public $tally = array();
     public $predominant = '';
+    public $whiteRuleTriggered = false;
 
     public function __construct()
     {
@@ -79,6 +80,7 @@ class Response
         // Predominant is WHITE if range of highest score and lowest score is <= 3.
         if (($values[0] - end($values)) <= 3) {
             $this->predominant = 'White';
+            $this->whiteRuleTriggered = true;
         } else {
             $this->predominant = $sortedCategories[0];
         }

@@ -60,6 +60,7 @@ class HomeController extends BaseController {
             'name' => Input::get('name'),
             'tally' => $response->tally,
             'predominant' => $response->predominant,
+            'whiteRuleTriggered' => $response->whiteRuleTriggered,
         ));
     }
 }

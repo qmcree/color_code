@@ -1,6 +1,12 @@
 @extends('layout.master')
 
 @section('content')
+    @if ($whiteRuleTriggered)
+    <div class="alert alert-info">
+        <p>Because your highest and lowest color were so close, you are considered to be a WHITE.</p>
+    </div>
+    @endif
+
     <h3 class="text-center text-info {{ strtolower($predominant) }}">Your predominant color is <span class="color">{{ $predominant }}</span></h3>
 
     <div id="results-chart"></div>
