@@ -30,7 +30,8 @@
                     @foreach ($options as $option)
                     <div class="radio">
                         <label>
-                            <input type="radio" name="options[{{ $question->id }}]" value="{{ $option['id'] }}" required>
+                            <?php $checked = in_array($option['id'], Input::old('options')) ? 'checked' : ''; ?>
+                            <input type="radio" name="options[{{ $question->id }}]" value="{{ $option['id'] }}" required {{ $checked }} />
                             {{{ $option['text'] }}}
                         </label>
                     </div>
@@ -44,15 +45,17 @@
         <div class="row">
             <div class="form-group col-sm-6">
                 <label for="full-name">Your full name</label>
-                <input type="text" id="full-name" class="form-control" name="name" required />
+                <input type="text" id="full-name" class="form-control" name="name" value="{{ Input::old('name') }}" required />
             </div>
             <div class="form-group col-sm-6">
                 <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" name="email" required />
+                <input type="email" id="email" class="form-control" name="email" value="{{ Input::old('email') }}" required />
             </div>
         </div>
         <input type="hidden" name="_token" value="{{ csrf_token(); }}" />
         <button type="submit" class="btn btn-primary">Complete test</button>
         <button type="reset" class="btn btn-default">Reset</button>
     </form>
+
+    {{ var_dump(Input::old('options')) }}
 @stop
